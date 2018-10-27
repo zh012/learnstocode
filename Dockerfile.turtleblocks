@@ -1,0 +1,9 @@
+FROM nginx:alpine
+
+COPY ./turtleblocks /opt/www
+COPY ./nginx.conf /opt/nginx.conf
+RUN mkdir /opt/logs
+
+EXPOSE 80
+
+CMD /usr/sbin/nginx -c /opt/nginx.conf -g "daemon off;"
