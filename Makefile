@@ -11,3 +11,9 @@ courses:
 		&& docker push learnstocode/courses:now \
 		&& cd courses \
 		&& now
+
+cdn:
+	docker build -f Dockerfile.proxy -t learnstocode/proxy:now . \
+		&& docker push learnstocode/proxy:now \
+		&& cd proxy \
+		&& now
