@@ -1,4 +1,4 @@
-.PHONY: turtleblocks courses
+.PHONY: turtleblocks courses proxy
 
 turtleblocks:
 	docker build -f Dockerfile.turtleblocks -t learnstocode/turtleblocks:now . \
@@ -12,7 +12,7 @@ courses:
 		&& cd courses \
 		&& now
 
-cdn:
+proxy:
 	docker build -f Dockerfile.proxy -t learnstocode/proxy:now . \
 		&& docker push learnstocode/proxy:now \
 		&& cd proxy \
