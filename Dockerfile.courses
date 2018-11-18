@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-RUN mkdir /opt/logs
+RUN mkdir -p /opt/logs
 EXPOSE 80
 CMD /usr/sbin/nginx -c /opt/nginx.conf -g "daemon off;"
 
